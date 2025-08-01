@@ -26,7 +26,7 @@ export default function AddUser() {
         e.preventDefault();
 
         try {
-            const adduser = await axios.post ('https://management-8vti.onrender.com/api/create', value)
+            const adduser = await axios.post ('https://management-server-jvs0.onrender.com/api/create', value)
             const response = adduser.data
             if (response.success) {
                 toast.success(response.Message)

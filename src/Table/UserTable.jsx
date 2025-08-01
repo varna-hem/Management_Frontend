@@ -21,7 +21,7 @@ export default function UserTable() {
     }
     const handleUserDelet = async () => {
         try {
-            const DeletUser = await axios.delete(`https://management-8vti.onrender.com/api/delete/${userId}`)
+            const DeletUser = await axios.delete(`https://management-server-jvs0.onrender.com/api/delete/${userId}`)
             const response = DeletUser.data
             if (response.success) {
                 toast.success(response.message)
@@ -49,7 +49,7 @@ export default function UserTable() {
         e.preventDefault();
     
         try {
-            const UpdatedUser = await axios.put(`https://management-8vti.onrender.com/api/update/${updatedUserId}`,value)
+            const UpdatedUser = await axios.put(`https://management-server-jvs0.onrender.com/api/update/${updatedUserId}`,value)
             const response = UpdatedUser.data
 
             if (response.success) {
